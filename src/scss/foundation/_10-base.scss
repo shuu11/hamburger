@@ -1,0 +1,96 @@
+//----------------------------------------------------------------------
+//  文字エンコーディング宣言
+//----------------------------------------------------------------------
+@charset "utf-8";
+
+//----------------------------------------------------------------------
+//  インポート宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  変数宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  mixin記述
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  Sass記述
+//----------------------------------------------------------------------
+html {
+	font-size: 62.5%;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $ff-default;
+	text-align: center;
+	font-size: 1.6rem;
+	color: $text-black;
+	background-color: $bgc-body;
+}
+
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	list-style: none;
+	padding-inline-start: 0px;
+}
+
+li{
+  width: 100%;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+a {
+	color: inherit;
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.25s;
+
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
+table {
+	border-collapse: collapse;
+}
+
+button,label,input,textarea{
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+button{
+	cursor: pointer;
+	padding: 0;
+	appearance: none;
+}
+
+textarea{
+	resize:none;
+}
+
+//	js付与
+body.open{
+	overflow: hidden;
+}
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/

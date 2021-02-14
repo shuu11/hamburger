@@ -1,0 +1,80 @@
+//----------------------------------------------------------------------
+//  文字エンコーディング宣言
+//----------------------------------------------------------------------
+@charset "utf-8";
+
+//----------------------------------------------------------------------
+//  インポート宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  変数宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  mixin記述
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  Sass記述
+//----------------------------------------------------------------------
+//	共通
+.p-mv {
+	position: relative;
+	padding-bottom: 285px;
+
+	background-image: url("../image/xs_mv_front-page@2x.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+	@include breakpoint(sm) {
+		background-image: url("../image/mv_front-page@2x.jpg");
+	}
+
+	@include breakpoint(lg) {
+		padding-bottom: 530px;
+	}
+
+	&__ttl {
+		position: absolute;
+		top: 50%;
+		left: 25px;
+		transform: translate(0%, -50%);
+
+		font-size: clamp(3.6rem,calc(3.6rem + 1vw),4rem);
+		font-weight: bold;
+
+		color: $text-white;
+
+		@include breakpoint(sm) {
+			top: 50%;
+			left: 86px;
+			transform: translate(0%, -50%);
+		}
+	}
+}
+
+//	archive.html
+.archive{
+	.p-mv{
+		padding-bottom: 239px;
+		background-image: url("../image/mv_archive@2x.jpg");
+
+		&__ttl{
+			font-family: $ff-roboto;
+			font-size: 6.0rem;
+
+			span{
+				margin-left: 20px;
+
+				font-size: 1.6rem;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/

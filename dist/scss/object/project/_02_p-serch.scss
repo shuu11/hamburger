@@ -1,0 +1,89 @@
+//----------------------------------------------------------------------
+//  文字エンコーディング宣言
+//----------------------------------------------------------------------
+@charset "utf-8";
+
+//----------------------------------------------------------------------
+//  インポート宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  変数宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  mixin記述
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  Sass記述
+//----------------------------------------------------------------------
+.p-search {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-top: 38px;
+
+	width: 85.5%;
+
+	@include breakpoint(sm) {
+		width: 65.5%;
+	}
+
+	@include breakpoint(lg) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		width: 35%;
+	}
+
+	&__word {
+		width: 72%;
+		height: 46px;
+		padding-left: 1.2rem;
+
+		font-size: 2rem;
+		font-weight: bold;
+
+		color: $text-search;
+		background-color: $bgc-white;
+
+		border: 1px solid $text-black;
+		border-radius: 10px;
+		box-shadow: 0px 0px 0px 0px rgba(#000, 1);
+
+		transition: all 0.1s;
+
+		&:focus,
+		&:hover {
+			box-shadow: 0px 0px 5px 0px rgba(#000, 0.3);
+		}
+	}
+
+	&__btn {
+		width: 25%;
+		height: 46px;
+
+		font-weight: normal;
+
+		color: $text-black;
+		background: $bgc-search;
+
+		border: 1px solid $text-black;
+		border-radius: 10px;
+
+		cursor: pointer;
+		transition: all 0.1s;
+
+		&:focus,
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/

@@ -1,0 +1,150 @@
+//----------------------------------------------------------------------
+//  文字エンコーディング宣言
+//----------------------------------------------------------------------
+@charset "utf-8";
+
+//----------------------------------------------------------------------
+//  インポート宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  変数宣言
+//----------------------------------------------------------------------
+$dDBG: (
+  //  デバッグモード状態選択
+  //  0：OFF 1：ON 2:!important
+  color: 0,
+  bg: 0,
+  outline:0
+);
+
+$dDBG_TAG: (
+//tag名         色(none/color)  背景色(none/color) 枠線(none/color)
+  body      : ( color: white, bg: #aaaaaa,    outline: black, ),
+  header    : ( color: white, bg: #ff88aa,    outline: black, ),
+  main      : ( color: white, bg: #ffaaff,    outline: black, ),
+  article   : ( color: white, bg: #aaffff,    outline: black, ),
+  section   : ( color: white, bg: #aaaaff,    outline: black, ),
+  aside     : ( color: white, bg: #aaffaa,    outline: black, ),
+  footer    : ( color: white, bg: #ffaaaa,    outline: black, ),
+  h1        : ( color: black, bg: none,         outline: black, ),
+  h2        : ( color: black, bg: none,         outline: black, ),
+  h3        : ( color: black, bg: none,         outline: black, ),
+  h4        : ( color: black, bg: none,         outline: black, ),
+  p         : ( color: black, bg: none,         outline: black, ),
+  div       : ( color: black, bg: #eeeeaa,    outline: black, ),
+  ul        : ( color: black, bg: none,         outline: black, ),
+  li        : ( color: black, bg: none,         outline: black, ),
+  a         : ( color: black, bg: #55aadd,    outline: black, ),
+  img       : ( color: black, bg: white,      outline: black, ),
+  i         : ( color: black, bg: white,      outline: black, ),
+  span      : ( color: black, bg: white,      outline: black, ),
+  strong    : ( color: black, bg: white,      outline: black, ),
+  big       : ( color: black, bg: white,      outline: black, ),
+  small     : ( color: black, bg: white,      outline: black, ),
+  em        : ( color: black, bg: white,      outline: black, ),
+  ol        : ( color: black, bg: white,      outline: black, ),
+  dl        : ( color: black, bg: white,      outline: black, ),
+  dt        : ( color: black, bg: white,      outline: black, ),
+  dd        : ( color: black, bg: white,      outline: black, ),
+  table     : ( color: black, bg: white,      outline: black, ),
+  tr        : ( color: black, bg: white,      outline: black, ),
+  th        : ( color: black, bg: white,      outline: black, ),
+  td        : ( color: black, bg: white,      outline: black, ),
+  form      : ( color: black, bg: white,      outline: black, ),
+  input     : ( color: black, bg: #eeaaee,    outline: black, ),
+  textarea  : ( color: black, bg: white,      outline: black, ),
+  select    : ( color: black, bg: white,      outline: black, ),
+  option    : ( color: black, bg: white,      outline: black, ),
+  button    : ( color: black, bg: #ee99ee,    outline: black, ),
+  figure    : ( color: black, bg: white,      outline: black, ),
+  figcaption: ( color: black, bg: white,      outline: black, ),
+  label     : ( color: black, bg: #aaeeee,    outline: black, ),
+  svg       : ( color: black, bg: white,      outline: black, ),
+
+//デバッグ用で追加したいtagがあれば追加、いらないtagがあれば削除(順不同)
+);
+
+$dDBG_CLASS:(
+//class名       色(none/color)  背景色(none/color) 枠線(none/color)
+  dbg1      : ( color: black, bg: tomato,     outline: black, ),
+  dbg2      : ( color: black, bg: skyblue,    outline: black, ),
+  dbg3      : ( color: black, bg: lightgreen, outline: black, ),
+  dbg4      : ( color: black, bg: tan,        outline: black, ),
+  dbg5      : ( color: black, bg: lightpink,  outline: black, ),
+
+//デバッグ用で追加したいclassがあれば追加、いらないclassがあれば削除(順不同)
+);
+
+
+//----------------------------------------------------------------------
+//  mixin記述
+//----------------------------------------------------------------------
+@mixin dbg_color($dbg: 0, $color: none) {
+  @if $dbg == 1 {
+    @if $color != none {
+      color: $color;
+    }
+  }
+
+  @if $dbg == 2 {
+    @if $color != none {
+      color: $color !important;
+    }
+  }
+}
+
+@mixin dbg_bg($dbg: 0, $bg: none) {
+  @if $dbg == 1 {
+    @if $bg != none {
+      background: rgba($bg, 0.5);
+    }
+  }
+
+  @if $dbg == 2 {
+    @if $bg != none {
+      background: rgba($bg, 0.5) !important;
+    }
+  }
+}
+
+@mixin dbg_outline($dbg: 0, $outline: none) {
+  @if $dbg == 1 {
+    @if $outline != none {
+      outline: 0.5px solid rgba($outline,0.5);
+    }
+  }
+
+  @if $dbg == 2 {
+    @if $outline != none {
+      outline: 0.5px solid rgba($outline,0.5) !important;
+    }
+  }
+}
+
+//----------------------------------------------------------------------
+//  Sass記述
+//----------------------------------------------------------------------
+//  宣言した分だけタグを生成
+@each $tag, $data in $dDBG_TAG {
+  #{$tag} {
+    @include dbg_color  (map-get($dDBG, "color"  ), map-get(map-get($dDBG_TAG, $tag), "color"  ));
+    @include dbg_bg     (map-get($dDBG, "bg"     ), map-get(map-get($dDBG_TAG, $tag), "bg"     ));
+    @include dbg_outline(map-get($dDBG, "outline"), map-get(map-get($dDBG_TAG, $tag), "outline"));
+  }
+}
+
+//  宣言した分だけクラスを生成
+@each $tag, $data in $dDBG_CLASS {
+  .#{$tag} {
+    @include dbg_color  (1, map-get(map-get($dDBG_CLASS, $tag), "color"  ));
+    @include dbg_bg     (1, map-get(map-get($dDBG_CLASS, $tag), "bg"     ));
+    @include dbg_outline(1, map-get(map-get($dDBG_CLASS, $tag), "outline"));
+  }
+}
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/
+
+
