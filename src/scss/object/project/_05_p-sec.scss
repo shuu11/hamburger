@@ -61,11 +61,10 @@
 	}
 }
 
-
 .p-sec__contents {
 	padding: 1.2rem;
 
-	color: $text-brawn;
+	color: $text-brown;
 	background-color: rgba($bgc-white, 0.8);
 
 	@include breakpoint(lg) {
@@ -103,7 +102,6 @@
 		}
 	}
 }
-
 
 /************************************************************************/
 /*  END OF FILE                                       									*/

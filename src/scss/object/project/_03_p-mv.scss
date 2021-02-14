@@ -55,21 +55,40 @@
 	}
 }
 
-//	archive.html
-.archive{
+//	archive,archive-search
+.archive,
+.archive-search{
 	.p-mv{
-		padding-bottom: 239px;
+		padding-bottom: 283px;
 		background-image: url("../image/mv_archive@2x.jpg");
+
+		@include breakpoint(lg) {
+			padding-bottom: 239px;
+		}
 
 		&__ttl{
 			font-family: $ff-roboto;
-			font-size: 6.0rem;
+			font-size: clamp(3.6rem, calc(3.6rem + 1vw), 6.0rem);
+
+			br{
+				display: block;
+
+				@include breakpoint(sm) {
+					display: none;
+				}
+			}
 
 			span{
-				margin-left: 20px;
+				margin-top: 7px;
 
 				font-size: 1.6rem;
+				font-weight: bold;
 				vertical-align: middle;
+
+				@include breakpoint(sm) {
+					margin-top: 0px;
+					margin-left: 20px;
+				}
 			}
 		}
 	}

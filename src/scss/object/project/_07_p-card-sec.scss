@@ -18,87 +18,89 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.p-sec {
+.p-card-sec{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 
 	width: 100%;
-	padding: 20px;
-
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	margin-top: 30px;
+	background-color: $bgc-card;
 
 	@include breakpoint(sm) {
-		width: calc(50% - 2.58%);
+		flex-direction: row;
 	}
 
-	&:nth-child(1) {
-		background-image: url("../image/xs_takeout_front-page@2x.jpg");
-
-		@include breakpoint(sm) {
-			background-image: url("../image/takeout_front-page@2x.jpg");
-		}
-	}
-
-	&:nth-child(2) {
-		margin-top: 20px;
-		background-image: url("../image/xs_eatin_front-page@2x.jpg");
-
-		@include breakpoint(sm) {
-			margin-top: 0px;
-			background-image: url("../image/eatin_front-page@2x.jpg");
-		}
-	}
-
-	&__wrapper {
-		margin-top: 232px;
-
-		@include breakpoint(sm) {
-			margin-top: 644.5px;
-		}
-	}
-}
-
-.p-sec__contents {
-	padding: 1.2rem;
-
-	color: $text-brown;
-	background-color: rgba($bgc-white, 0.8);
-
-	@include breakpoint(lg) {
-		padding: 2rem;
-	}
-
-	h3 {
-		font-size: 2.4rem;
-		font-weight: bold;
-
-		text-align: left;
-
-		@include breakpoint(sm) {
-			font-size: 2.2rem;
-		}
-	}
-
-	p {
-		margin-top: 22px;
-		padding-bottom: 5%;
-
-		text-align: left;
-		line-height: 1.333333;
+	&:first-child{
+		margin-top: 100px;
 
 		@include breakpoint(lg) {
-			margin-top: 28px;
+			margin-top: 70px;
 		}
 	}
 
-	& + & {
-		margin-top: 10px;
+	&__img{
+		object-fit: cover;
+		width: 100%;
+
+		@include breakpoint(sm) {
+			width: 50%;
+		}
+	}
+
+	&__figcaption{
+		width: 100%;
+		padding: 2.9rem 5.9rem 4.0rem 3.4rem;
+
+		color: $text-white;
+
+		@include breakpoint(sm) {
+			width: 50%;
+		}
 
 		@include breakpoint(lg) {
-			margin-top: 20px;
+			padding: 5.3rem 3.4rem 6.0rem 3.3rem;
+		}
+
+		h2{
+			font-size: clamp(2.0rem, calc(2.0rem + 1vw),3.6rem);
+			font-weight: bold;
+
+			text-align: left;
+		}
+
+		h3{
+			margin-top: 25px;
+
+			font-size: clamp(1.6rem, calc(1.6rem + 1vw),2.4rem);
+			font-weight: bold;
+
+			text-align: left;
+
+			@include breakpoint(sm) {
+				margin-top: 50px;
+			}
+
+			@include breakpoint(lg) {
+				margin-top: 25px;
+			}
+		}
+
+		p{
+			margin-top: 11px;
+
+			text-align: left;
+
+			@include breakpoint(lg) {
+				margin-top: 19px;
+			}
+		}
+
+		a{
+			margin-top: 45px;
+
+			@include breakpoint(lg) {
+				margin-top: 60px;
+			}
 		}
 	}
 }

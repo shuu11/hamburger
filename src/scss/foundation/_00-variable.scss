@@ -16,21 +16,30 @@
 //----------------------------------------------------------------------
 //  font family
 $ff-default: "mplus-1m", "Roboto", sans-serif;
-$ff-roboto:"Roboto", sans-serif;
+$ff-roboto: "Roboto", sans-serif;
 
 //  text
 $text-white: #fff;
-$text-black:#707070;
-$text-brawn:#3c2a10;
-$text-search:#808080;
+$text-black: #707070;
+$text-brown: #3c2a10;
+$text-search: #808080;
 
 //  bgc
 $bgc-white: #fff;
 $bgc-black: #000;
-$bgc-header:#fff7ef;
-$bgc-body:#fffdfa;
-$bgc-sidebar:#f2ede9;
-$bgc-search:linear-gradient(to bottom, #f2ede9 30% , #e2dcd7 50% , #e1dbd6 60% , #e1dbd6 99% , #ded8d3);
+$bgc-header: #fff7ef;
+$bgc-body: #fffdfa;
+$bgc-sidebar: #f2ede9;
+$bgc-search: linear-gradient(
+	to bottom,
+	#f2ede9 30%,
+	#e2dcd7 50%,
+	#e1dbd6 60%,
+	#e1dbd6 99%,
+	#ded8d3
+);
+$bgc-card: #3c2b1c;
+$bgc-page: #3c2b1c;
 
 //----------------------------------------------------------------------
 //  Sass記述

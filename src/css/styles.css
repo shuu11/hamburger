@@ -209,6 +209,18 @@ body.open {
 /************************************************************************/
 /*  END OF FILE                                       									*/
 /************************************************************************/
+.c-card-btn {
+  display: inline-block;
+  width: 60%;
+  line-height: 76px;
+  font-weight: bold;
+  color: #3c2a10;
+  background-color: #fff;
+  border-radius: 38px; }
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/
 .c-container {
   max-width: 1920px;
   margin: 0 auto;
@@ -217,6 +229,10 @@ body.open {
 /************************************************************************/
 /*  END OF FILE                                       									*/
 /************************************************************************/
+.c-current {
+  color: #fff !important;
+  background-color: #3c2b1c !important; }
+
 /************************************************************************/
 /*  END OF FILE                                       									*/
 /************************************************************************/
@@ -435,16 +451,36 @@ body.open {
         -webkit-transform: translate(0%, -50%);
         transform: translate(0%, -50%); } }
 
-.archive .p-mv {
-  padding-bottom: 239px;
+.archive .p-mv,
+.archive-search .p-mv {
+  padding-bottom: 283px;
   background-image: url("../image/mv_archive@2x.jpg"); }
-  .archive .p-mv__ttl {
+  @media (min-width: 961px) {
+    .archive .p-mv,
+    .archive-search .p-mv {
+      padding-bottom: 239px; } }
+  .archive .p-mv__ttl,
+  .archive-search .p-mv__ttl {
     font-family: "Roboto", sans-serif;
-    font-size: 6.0rem; }
-    .archive .p-mv__ttl span {
-      margin-left: 20px;
+    font-size: clamp(3.6rem, calc(3.6rem + 1vw), 6rem); }
+    .archive .p-mv__ttl br,
+    .archive-search .p-mv__ttl br {
+      display: block; }
+      @media (min-width: 641px) {
+        .archive .p-mv__ttl br,
+        .archive-search .p-mv__ttl br {
+          display: none; } }
+    .archive .p-mv__ttl span,
+    .archive-search .p-mv__ttl span {
+      margin-top: 7px;
       font-size: 1.6rem;
+      font-weight: bold;
       vertical-align: middle; }
+      @media (min-width: 641px) {
+        .archive .p-mv__ttl span,
+        .archive-search .p-mv__ttl span {
+          margin-top: 0px;
+          margin-left: 20px; } }
 
 /************************************************************************/
 /*  END OF FILE                                       									*/
@@ -471,6 +507,36 @@ body.open {
       -ms-flex-direction: row;
       flex-direction: row;
       padding: 7.7% 7.2%; } }
+
+.p-main__top {
+  color: #3c2a10; }
+  .p-main__top h2 {
+    font-size: clamp(2.8rem, calc(2.8rem + 1vw), 3.6rem);
+    font-weight: bold;
+    text-align: left; }
+  .p-main__top p {
+    margin-top: 28px;
+    line-height: 1.3125;
+    text-align: left; }
+
+.archive .p-main,
+.archive-search .p-main {
+  padding-bottom: 30px; }
+  .archive .p-main__inner,
+  .archive-search .p-main__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 18px 61px 22px; }
+    @media (min-width: 641px) {
+      .archive .p-main__inner,
+      .archive-search .p-main__inner {
+        padding: 36px 35px 106px 43px; } }
+    @media (min-width: 961px) {
+      .archive .p-main__inner,
+      .archive-search .p-main__inner {
+        padding: 60px 50px 150px 50px; } }
 
 /************************************************************************/
 /*  END OF FILE                                       									*/
@@ -600,6 +666,134 @@ body.open {
           max-height: 60%; } }
       .p-map-sec__contents p::-webkit-scrollbar {
         display: none; }
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/
+.p-card-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  background-color: #3c2b1c; }
+  @media (min-width: 641px) {
+    .p-card-sec {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
+  .p-card-sec:first-child {
+    margin-top: 100px; }
+    @media (min-width: 961px) {
+      .p-card-sec:first-child {
+        margin-top: 70px; } }
+  .p-card-sec__img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%; }
+    @media (min-width: 641px) {
+      .p-card-sec__img {
+        width: 50%; } }
+  .p-card-sec__figcaption {
+    width: 100%;
+    padding: 2.9rem 5.9rem 4.0rem 3.4rem;
+    color: #fff; }
+    @media (min-width: 641px) {
+      .p-card-sec__figcaption {
+        width: 50%; } }
+    @media (min-width: 961px) {
+      .p-card-sec__figcaption {
+        padding: 5.3rem 3.4rem 6.0rem 3.3rem; } }
+    .p-card-sec__figcaption h2 {
+      font-size: clamp(2rem, calc(2.0rem + 1vw), 3.6rem);
+      font-weight: bold;
+      text-align: left; }
+    .p-card-sec__figcaption h3 {
+      margin-top: 25px;
+      font-size: clamp(1.6rem, calc(1.6rem + 1vw), 2.4rem);
+      font-weight: bold;
+      text-align: left; }
+      @media (min-width: 641px) {
+        .p-card-sec__figcaption h3 {
+          margin-top: 50px; } }
+      @media (min-width: 961px) {
+        .p-card-sec__figcaption h3 {
+          margin-top: 25px; } }
+    .p-card-sec__figcaption p {
+      margin-top: 11px;
+      text-align: left; }
+      @media (min-width: 961px) {
+        .p-card-sec__figcaption p {
+          margin-top: 19px; } }
+    .p-card-sec__figcaption a {
+      margin-top: 45px; }
+      @media (min-width: 961px) {
+        .p-card-sec__figcaption a {
+          margin-top: 60px; } }
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/
+.p-pagenation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  @media (min-width: 641px) {
+    .p-pagenation {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+  .p-pagenation__num {
+    display: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold; }
+    @media (min-width: 641px) {
+      .p-pagenation__num {
+        display: block; } }
+  .p-pagenation__pre, .p-pagenation__next {
+    margin-left: 19px; }
+    .p-pagenation__pre a, .p-pagenation__next a {
+      width: auto;
+      line-height: 35px; }
+      @media (min-width: 641px) {
+        .p-pagenation__pre a, .p-pagenation__next a {
+          width: 35px; } }
+      .p-pagenation__pre a span, .p-pagenation__next a span {
+        display: inline-block;
+        line-height: 35px;
+        padding: 0 10px; }
+        @media (min-width: 641px) {
+          .p-pagenation__pre a span, .p-pagenation__next a span {
+            display: none; } }
+  .p-pagenation__list {
+    display: none; }
+    @media (min-width: 641px) {
+      .p-pagenation__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; } }
+    .p-pagenation__list li {
+      margin-left: 15px; }
+      .p-pagenation__list li a {
+        width: 35px;
+        line-height: 35px;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        background-color: #fff;
+        outline: 1px solid #707070; }
 
 /************************************************************************/
 /*  END OF FILE                                       									*/
