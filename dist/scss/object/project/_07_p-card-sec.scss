@@ -18,77 +18,88 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-//	共通
-.p-mv {
-	position: relative;
-	padding-bottom: 285px;
+.p-card-sec{
+	display: flex;
+	flex-direction: column;
 
-	background-image: url("../image/xs_mv_front-page@2x.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	width: 100%;
+	margin-top: 30px;
+	background-color: $bgc-card;
 
 	@include breakpoint(sm) {
-		background-image: url("../image/mv_front-page@2x.jpg");
+		flex-direction: row;
 	}
 
-	@include breakpoint(lg) {
-		padding-bottom: 530px;
+	&:first-child{
+		margin-top: 100px;
+
+		@include breakpoint(lg) {
+			margin-top: 70px;
+		}
 	}
 
-	&__ttl {
-		position: absolute;
-		top: 50%;
-		left: 25px;
-		transform: translate(0%, -50%);
+	&__img{
+		object-fit: cover;
+		width: 100%;
 
-		font-size: clamp(3.6rem,calc(3.6rem + 1vw),4rem);
-		font-weight: bold;
+		@include breakpoint(sm) {
+			width: 50%;
+		}
+	}
+
+	&__figcaption{
+		width: 100%;
+		padding: 2.9rem 5.9rem 4.0rem 3.4rem;
 
 		color: $text-white;
 
 		@include breakpoint(sm) {
-			top: 50%;
-			left: 86px;
-			transform: translate(0%, -50%);
+			width: 50%;
 		}
-	}
-}
-
-//	archive,archive-search
-.archive,
-.archive-search{
-	.p-mv{
-		padding-bottom: 283px;
-		background-image: url("../image/mv_archive@2x.jpg");
 
 		@include breakpoint(lg) {
-			padding-bottom: 239px;
+			padding: 5.3rem 3.4rem 6.0rem 3.3rem;
 		}
 
-		&__ttl{
-			font-family: $ff-roboto;
-			font-size: clamp(3.6rem, calc(3.6rem + 1vw), 6.0rem);
+		h2{
+			font-size: clamp(2.0rem, calc(2.0rem + 1vw),3.6rem);
+			font-weight: bold;
 
-			br{
-				display: block;
+			text-align: left;
+		}
 
-				@include breakpoint(sm) {
-					display: none;
-				}
+		h3{
+			margin-top: 25px;
+
+			font-size: clamp(1.6rem, calc(1.6rem + 1vw),2.4rem);
+			font-weight: bold;
+
+			text-align: left;
+
+			@include breakpoint(sm) {
+				margin-top: 50px;
 			}
 
-			span{
-				margin-top: 7px;
+			@include breakpoint(lg) {
+				margin-top: 25px;
+			}
+		}
 
-				font-size: 1.6rem;
-				font-weight: bold;
-				vertical-align: middle;
+		p{
+			margin-top: 11px;
 
-				@include breakpoint(sm) {
-					margin-top: 0px;
-					margin-left: 20px;
-				}
+			text-align: left;
+
+			@include breakpoint(lg) {
+				margin-top: 19px;
+			}
+		}
+
+		a{
+			margin-top: 45px;
+
+			@include breakpoint(lg) {
+				margin-top: 60px;
 			}
 		}
 	}

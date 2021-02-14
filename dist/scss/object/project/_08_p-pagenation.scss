@@ -14,36 +14,77 @@
 //----------------------------------------------------------------------
 //  mixin記述
 //----------------------------------------------------------------------
-//  font family
-$ff-default: "mplus-1m", "Roboto", sans-serif;
-$ff-roboto: "Roboto", sans-serif;
-
-//  text
-$text-white: #fff;
-$text-black: #707070;
-$text-brown: #3c2a10;
-$text-search: #808080;
-
-//  bgc
-$bgc-white: #fff;
-$bgc-black: #000;
-$bgc-header: #fff7ef;
-$bgc-body: #fffdfa;
-$bgc-sidebar: #f2ede9;
-$bgc-search: linear-gradient(
-	to bottom,
-	#f2ede9 30%,
-	#e2dcd7 50%,
-	#e1dbd6 60%,
-	#e1dbd6 99%,
-	#ded8d3
-);
-$bgc-card: #3c2b1c;
-$bgc-page: #3c2b1c;
 
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
+.p-pagenation{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	@include breakpoint(sm) {
+		justify-content: center;
+	}
+
+	&__num{
+		display: none;
+		font-family: $ff-roboto;
+		font-weight: bold;
+
+		@include breakpoint(sm) {
+			display: block;
+		}
+	}
+
+	&__pre,
+	&__next{
+		margin-left: 19px;
+
+		a{
+			width: auto;
+			line-height: 35px;
+
+			@include breakpoint(sm) {
+				width: 35px;
+			}
+
+			span{
+				display: inline-block;
+				line-height:35px;
+				padding:0 10px;
+
+				@include breakpoint(sm) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__list{
+		display: none;
+
+		@include breakpoint(sm) {
+			display: flex;
+			align-items: center;
+		}
+
+		li{
+			margin-left: 15px;
+
+			a {
+				width: 35px;
+				line-height: 35px;
+
+				font-family: $ff-roboto;
+				font-weight: bold;
+
+				background-color: $bgc-white;
+				outline: 1px solid $text-black;
+			}
+		}
+	}
+}
 
 /************************************************************************/
 /*  END OF FILE                                       									*/
