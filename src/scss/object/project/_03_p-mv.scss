@@ -94,6 +94,30 @@
 	}
 }
 
+//	single
+.single{
+	.p-mv{
+		padding-bottom: 500px;
+		background-image: url("../image/mv_single@2x.jpg");
+
+		&__ttl{
+			font-size: 6.0rem;
+		}
+	}
+}
+
+//	page
+.page{
+	.p-mv{
+		padding-bottom: 500px;
+		background-image: url("../image/mv_page@2x.jpg");
+
+		&__ttl{
+			font-size: 6.0rem;
+		}
+	}
+}
+
 /************************************************************************/
 /*  END OF FILE                                       									*/
 /************************************************************************/

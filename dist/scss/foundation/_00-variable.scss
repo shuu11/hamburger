@@ -27,17 +27,11 @@ $text-search: #808080;
 //  bgc
 $bgc-white: #fff;
 $bgc-black: #000;
+$bgc-gray: #f5f5f5;
 $bgc-header: #fff7ef;
 $bgc-body: #fffdfa;
 $bgc-sidebar: #f2ede9;
-$bgc-search: linear-gradient(
-	to bottom,
-	#f2ede9 30%,
-	#e2dcd7 50%,
-	#e1dbd6 60%,
-	#e1dbd6 99%,
-	#ded8d3
-);
+$bgc-btn: linear-gradient(to bottom, #f2ede9 30%, #e2dcd7 50%, #e1dbd6 60%, #e1dbd6 99%, #ded8d3);
 $bgc-card: #3c2b1c;
 $bgc-page: #3c2b1c;
 
