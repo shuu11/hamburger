@@ -761,12 +761,13 @@ body.open {
       .p-pagenation__num {
         display: block; } }
   .p-pagenation__pre, .p-pagenation__next {
-    margin-left: 19px; }
+    margin-left: 0px; }
     .p-pagenation__pre a, .p-pagenation__next a {
       width: auto;
       line-height: 35px; }
       @media (min-width: 641px) {
         .p-pagenation__pre a, .p-pagenation__next a {
+          margin-left: 19px;
           width: 35px; } }
       .p-pagenation__pre a span, .p-pagenation__next a span {
         display: inline-block;

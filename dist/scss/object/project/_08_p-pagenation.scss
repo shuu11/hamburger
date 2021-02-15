@@ -39,13 +39,14 @@
 
 	&__pre,
 	&__next{
-		margin-left: 19px;
+		margin-left: 0px;
 
 		a{
 			width: auto;
 			line-height: 35px;
 
 			@include breakpoint(sm) {
+				margin-left: 19px;
 				width: 35px;
 			}
 

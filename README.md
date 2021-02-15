@@ -1,6 +1,6 @@
 <!--lint disable awesome-heading awesome-github double-link no-dead-urls-->
 
-<p align="center">
+<!-- <p align="center">
   <br />
   <img width="100" src="./dist/image/tailwind/logo.svg" alt="Tailwind CSS logo">
   <br />
@@ -343,4 +343,4 @@
   <br />
   <br />
   <sub>Contributions welcome! Read the <a href=".github/CONTRIBUTING.md">contribution guidelines</a> first.</sub>
-</p>
+</p> -->
