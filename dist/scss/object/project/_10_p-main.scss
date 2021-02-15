@@ -1,0 +1,114 @@
+//----------------------------------------------------------------------
+//  文字エンコーディング宣言
+//----------------------------------------------------------------------
+@charset "utf-8";
+
+//----------------------------------------------------------------------
+//  インポート宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  変数宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  mixin記述
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  Sass記述
+//----------------------------------------------------------------------
+//	共通
+.p-main {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+
+		padding: 20px;
+
+		@include breakpoint(sm) {
+			flex-direction: row;
+
+			padding: 7.7% 7.2%;
+		}
+	}
+
+	&__top {
+		color: $text-brown;
+
+		h2 {
+			font-size: clamp(2.8rem, calc(2.8rem + 1vw), 3.6rem);
+			font-weight: bold;
+			text-align: left;
+		}
+
+		p {
+			margin-top: 28px;
+
+			line-height: 1.3125;
+			text-align: left;
+		}
+
+		h3,
+		h4,
+		h5,
+		h6{
+			margin-top: 60px;
+
+			font-size: 2.0rem;
+			font-weight: bold;
+			text-align: left;
+		}
+
+		h3:first-of-type {
+			font-size: 2.8rem;
+		}
+	}
+}
+
+//	archive,archive-search
+.archive,
+.archive-search {
+	.p-main {
+		padding-bottom: 30px;
+
+		&__inner {
+			align-items: normal;
+			justify-content: flex-start;
+
+			@include breakpoint(sm) {
+				flex-direction: column;
+				padding: 5%;
+			}
+		}
+	}
+}
+
+//	single,page
+.single,
+.page{
+	.p-main{
+		&__inner {
+			align-items: normal;
+			justify-content: flex-start;
+
+			@include breakpoint(sm) {
+				flex-direction: column;
+				padding: 5%;
+			}
+		}
+
+		&__top {
+			p{
+				margin-top: 63px;
+			}
+		}
+	}
+}
+
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/
