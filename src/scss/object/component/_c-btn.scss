@@ -19,7 +19,7 @@
 //  Sass記述
 //----------------------------------------------------------------------
 .c-btn {
-	width: 31.7%;
+	width: 100%;
 	line-height: 104px;
 
 	font-weight: bold;
@@ -32,6 +32,10 @@
 
 	cursor: pointer;
 	transition: all 0.1s;
+
+	@include breakpoint(sm) {
+		width: 31.7%;
+	}
 
 	&:focus,
 	&:hover {

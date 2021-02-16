@@ -97,11 +97,15 @@
 //	single
 .single{
 	.p-mv{
-		padding-bottom: 500px;
+		padding-bottom: 225px;
 		background-image: url("../image/mv_single@2x.jpg");
 
+		@include breakpoint(sm) {
+			padding-bottom: 500px;
+		}
+
 		&__ttl{
-			font-size: 6.0rem;
+			font-size: clamp(3.6rem, calc(3.6rem + 1vw), 6.0rem);
 		}
 	}
 }
@@ -109,11 +113,15 @@
 //	page
 .page{
 	.p-mv{
-		padding-bottom: 500px;
+		padding-bottom: 225px;
 		background-image: url("../image/mv_page@2x.jpg");
 
+		@include breakpoint(sm) {
+			padding-bottom: 500px;
+		}
+
 		&__ttl{
-			font-size: 6.0rem;
+			font-size: clamp(3.6rem, calc(3.6rem + 1vw), 6.0rem);
 		}
 	}
 }

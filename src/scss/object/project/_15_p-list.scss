@@ -19,8 +19,13 @@
 //  Sass記述
 //----------------------------------------------------------------------
 .p-list{
-	margin-top: 53px;
-	margin-left: 50px;
+	margin-top: 32px;
+	margin-left: 20px;
+
+	@include breakpoint(sm) {
+		margin-top: 53px;
+		margin-left: 50px;
+	}
 }
 
 .p-list__ordered{

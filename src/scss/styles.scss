@@ -6,24 +6,71 @@
 //----------------------------------------------------------------------
 //  インポート宣言
 //----------------------------------------------------------------------
+// //  reset
+// @import "./reset/**";
+
+// //  foundation
+// @import "./foundation/00-variable";
+// @import "./foundation/**";
+
+// //  layout
+// @import "./layout/**";
+
+// //  object/component
+// @import "./object/component/**";
+
+// //  object/project
+// @import "./object/project/**";
+
+// //  object/utility
+// @import "./object/utility/**";
+
+
 //  reset
-@import "./reset/**";
+@import "./reset/reset";
 
 //  foundation
 @import "./foundation/00-variable";
-@import "./foundation/**";
+@import "./foundation/01-font";
+@import "./foundation/02-breakpoint";
+@import "./foundation/10-base";
+@import "./foundation/99-debug";
 
 //  layout
-@import "./layout/**";
+@import "./layout/00_l-contents";
 
 //  object/component
-@import "./object/component/**";
+@import "./object/component/c-btn";
+@import "./object/component/c-card-btn";
+@import "./object/component/c-container";
+@import "./object/component/c-current";
+@import "./object/component/c-mask";
+@import "./object/component/c-side-btn";
+@import "./object/component/c-ttl_under";
 
 //  object/project
-@import "./object/project/**";
+@import "./object/project/01_p-header";
+@import "./object/project/02_p-serch";
+@import "./object/project/03_p-mv";
+@import "./object/project/10_p-main";
+@import "./object/project/11_p-sec";
+@import "./object/project/12_p-card-sec";
+@import "./object/project/13_p-block-quote";
+@import "./object/project/14_p-hamburger";
+@import "./object/project/15_p-list";
+@import "./object/project/16_p-code";
+@import "./object/project/17_p-table";
+@import "./object/project/18_p-btn";
+@import "./object/project/19_p-text-area";
+@import "./object/project/96_p-map-sec";
+@import "./object/project/97_p-pagenation";
+@import "./object/project/98_p-sidebar";
+@import "./object/project/99_p-footer";
 
 //  object/utility
-@import "./object/utility/**";
+@import "./object/utility/u-pos";
+@import "./object/utility/u-text";
+@import "./object/utility/u-z-index";
 
 
 
