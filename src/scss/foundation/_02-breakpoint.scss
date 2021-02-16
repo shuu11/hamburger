@@ -25,29 +25,29 @@ $WIDTH_LG: 961px;
 //----------------------------------------------------------------------
 //  ブレークポイント
 @mixin breakpoint($point) {
-  @if $point == xs {
-    @media (min-width: $WIDTH_XS) {
-      @content;
-    }
-  }
+	@if $point == xs {
+		@media (min-width: $WIDTH_XS) {
+			@content;
+		}
+	}
 
-  @if $point == sm {
-    @media (min-width: $WIDTH_SM) {
-      @content;
-    }
-  }
+	@if $point == sm {
+		@media (min-width: $WIDTH_SM) {
+			@content;
+		}
+	}
 
-  @if $point == md {
-    @media (min-width: $WIDTH_MD) {
-      @content;
-    }
-  }
+	@if $point == md {
+		@media (min-width: $WIDTH_MD) {
+			@content;
+		}
+	}
 
-  @if $point == lg {
-    @media (min-width: $WIDTH_LG) {
-      @content;
-    }
-  }
+	@if $point == lg {
+		@media (min-width: $WIDTH_LG) {
+			@content;
+		}
+	}
 }
 
 // 処理側記述
@@ -69,5 +69,3 @@ $WIDTH_LG: 961px;
 /************************************************************************/
 /*  END OF FILE                                       									*/
 /************************************************************************/
-
-

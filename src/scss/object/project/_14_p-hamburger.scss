@@ -18,42 +18,42 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.p-hamburger{
+.p-hamburger {
 	margin-top: 32px;
 
 	@include breakpoint(sm) {
 		margin-top: 60px;
 	}
 
-	&__bigImg{
-		img{
+	&__bigImg {
+		img {
 			width: 100%;
 			object-fit: cover;
 		}
 	}
 
-	&__contents{
+	&__contents {
 		margin-top: 30px;
 
 		@include breakpoint(sm) {
 			margin-top: 60px;
 		}
 
-		&--list{
+		&--list {
 			display: flex;
 			flex-direction: row;
 			align-items: flex-start;
 			justify-content: space-between;
 
-			&:nth-child(even){
+			&:nth-child(even) {
 				flex-direction: row-reverse;
 			}
 
-			img{
+			img {
 				width: 42.3%;
 			}
 
-			p{
+			p {
 				width: 54.2%;
 				padding-bottom: 10%;
 
@@ -62,7 +62,7 @@
 			}
 		}
 
-		&--list + &--list{
+		&--list + &--list {
 			margin-top: 30px;
 
 			@include breakpoint(sm) {
@@ -71,7 +71,7 @@
 		}
 	}
 
-	&__smallImg{
+	&__smallImg {
 		margin-top: 30px;
 		max-width: 80%;
 		margin: 0 auto;
@@ -80,16 +80,16 @@
 			margin-top: 60px;
 		}
 
-		img{
+		img {
 			width: 100%;
 			object-fit: cover;
 		}
 	}
 
-	&__wrapper{
+	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
-		gap:20px;
+		gap: 20px;
 
 		margin-top: 30px;
 
@@ -97,7 +97,7 @@
 			margin-top: 60px;
 		}
 
-		img{
+		img {
 			grid-column: span 12 / span 12;
 
 			width: 100%;

@@ -18,7 +18,7 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.p-map-sec{
+.p-map-sec {
 	position: relative;
 
 	height: 415px;
@@ -29,7 +29,7 @@
 		height: 650px;
 	}
 
-	&__map{
+	&__map {
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -60,7 +60,7 @@
 		}
 
 		h2 {
-			font-size: clamp(3.0rem,calc(3.0rem + 1vw),3.6rem);
+			font-size: clamp(3rem, calc(3rem + 1vw), 3.6rem);
 			text-align: left;
 
 			&::after {
@@ -85,7 +85,7 @@
 
 			max-height: 60%;
 
-			font-size: clamp(1.4rem,calc(1.4rem + 1vw),1.6rem);
+			font-size: clamp(1.4rem, calc(1.4rem + 1vw), 1.6rem);
 			text-align: left;
 			line-height: 2;
 
@@ -97,7 +97,7 @@
 			}
 
 			&::-webkit-scrollbar {
-        display:none;
+				display: none;
 			}
 		}
 	}

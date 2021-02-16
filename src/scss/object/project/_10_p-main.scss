@@ -54,10 +54,10 @@
 		h3,
 		h4,
 		h5,
-		h6{
+		h6 {
 			margin-top: 30px;
 
-			font-size: 2.0rem;
+			font-size: 2rem;
 			font-weight: bold;
 			text-align: left;
 
@@ -65,7 +65,6 @@
 				margin-top: 60px;
 			}
 		}
-
 
 		h3:first-of-type {
 			font-size: clamp(2.4rem, calc(2.4rem + 1vw), 2.8rem);
@@ -93,8 +92,8 @@
 
 //	single,page
 .single,
-.page{
-	.p-main{
+.page {
+	.p-main {
 		&__inner {
 			align-items: normal;
 			justify-content: flex-start;
@@ -106,7 +105,7 @@
 		}
 
 		&__top {
-			p{
+			p {
 				margin-top: 32px;
 
 				@include breakpoint(sm) {
@@ -116,7 +115,6 @@
 		}
 	}
 }
-
 
 /************************************************************************/
 /*  END OF FILE                                       									*/
