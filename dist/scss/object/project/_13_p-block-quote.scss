@@ -18,31 +18,31 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.p-block-quote{
+.p-block-quote {
 	margin-top: 60px;
 	padding: 3.7%;
 
 	text-align: left;
 	background-color: $bgc-gray;
 
-	blockquote{
+	blockquote {
 		font-size: 1.6rem;
 		line-height: 1.3125;
 
-		cite{
+		cite {
 			display: block;
 			margin-top: 60px;
 
 			a {
-				display:inline-block;
+				display: inline-block;
 				text-decoration: underline;
 
-				&:link{
+				&:link {
 					color: #00f;
 				}
 
-				&:visited{
-					color:#609;
+				&:visited {
+					color: #609;
 				}
 
 				&:hover {
@@ -52,7 +52,6 @@
 		}
 	}
 }
-
 
 /************************************************************************/
 /*  END OF FILE                                       									*/

@@ -70,6 +70,9 @@ select {
 /************************************************************************/
 /*  END OF FILE                                       									*/
 /************************************************************************/
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/
 @font-face {
   font-family: "mplus-1m";
   src: url("../../font/mplus-1m-bold.ttf") format("truetype"), url("../../font/mplus-1m-regular.ttf") format("truetype"); }
@@ -128,7 +131,10 @@ a {
 table {
   border-collapse: collapse; }
 
-button, label, input, textarea {
+button,
+label,
+input,
+textarea {
   background-color: transparent;
   border: none;
   outline: none; }
@@ -378,7 +384,7 @@ body.open {
     right: 26px;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    font-size: clamp(2rem, calc(2.0rem + 1vw), 3.4rem);
+    font-size: clamp(2rem, calc(2rem + 1vw), 3.4rem);
     color: #707070; }
     @media (min-width: 961px) {
       .p-header__btn {
@@ -517,26 +523,9 @@ body.open {
 /*  END OF FILE                                       									*/
 /************************************************************************/
 .p-main__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   padding: 20px; }
   @media (min-width: 641px) {
     .p-main__inner {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
       padding: 7.7% 7.2%; } }
 
 .p-main__top {
@@ -554,7 +543,7 @@ body.open {
   .p-main__top h5,
   .p-main__top h6 {
     margin-top: 30px;
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: left; }
     @media (min-width: 641px) {
@@ -569,39 +558,15 @@ body.open {
 .archive .p-main,
 .archive-search .p-main {
   padding-bottom: 30px; }
-  .archive .p-main__inner,
-  .archive-search .p-main__inner {
-    -webkit-box-align: normal;
-    -ms-flex-align: normal;
-    align-items: normal;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
-    @media (min-width: 641px) {
-      .archive .p-main__inner,
-      .archive-search .p-main__inner {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding: 5%; } }
-
-.single .p-main__inner,
-.page .p-main__inner {
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
   @media (min-width: 641px) {
-    .single .p-main__inner,
-    .page .p-main__inner {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
+    .archive .p-main__inner,
+    .archive-search .p-main__inner {
       padding: 5%; } }
+
+@media (min-width: 641px) {
+  .single .p-main__inner,
+  .page .p-main__inner {
+    padding: 5%; } }
 
 .single .p-main__top p,
 .page .p-main__top p {
@@ -624,6 +589,25 @@ body.open {
   flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  justify-content: space-between; }
+  @media (min-width: 641px) {
+    .p-sec {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
+
+.p-sec01,
+.p-sec02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   padding: 20px;
@@ -631,53 +615,73 @@ body.open {
   background-size: cover;
   background-position: center center; }
   @media (min-width: 641px) {
-    .p-sec {
+    .p-sec01,
+    .p-sec02 {
       width: calc(50% - 2.58%); } }
-  .p-sec:nth-child(1) {
+  .p-sec01:nth-child(1),
+  .p-sec02:nth-child(1) {
     background-image: url("../image/xs_takeout_front-page@2x.jpg"); }
     @media (min-width: 641px) {
-      .p-sec:nth-child(1) {
+      .p-sec01:nth-child(1),
+      .p-sec02:nth-child(1) {
         background-image: url("../image/takeout_front-page@2x.jpg"); } }
-  .p-sec:nth-child(2) {
+  .p-sec01:nth-child(2),
+  .p-sec02:nth-child(2) {
     margin-top: 20px;
     background-image: url("../image/xs_eatin_front-page@2x.jpg"); }
     @media (min-width: 641px) {
-      .p-sec:nth-child(2) {
+      .p-sec01:nth-child(2),
+      .p-sec02:nth-child(2) {
         margin-top: 0px;
         background-image: url("../image/eatin_front-page@2x.jpg"); } }
-  .p-sec__wrapper {
+  .p-sec01__wrapper,
+  .p-sec02__wrapper {
     margin-top: 232px; }
     @media (min-width: 641px) {
-      .p-sec__wrapper {
+      .p-sec01__wrapper,
+      .p-sec02__wrapper {
         margin-top: 644.5px; } }
-
-.p-sec__contents {
-  padding: 1.2rem;
-  color: #3c2a10;
-  background-color: rgba(255, 255, 255, 0.8); }
-  @media (min-width: 961px) {
-    .p-sec__contents {
-      padding: 2rem; } }
-  .p-sec__contents h3 {
-    font-size: 2.4rem;
-    font-weight: bold;
-    text-align: left; }
-    @media (min-width: 641px) {
-      .p-sec__contents h3 {
-        font-size: 2.2rem; } }
-  .p-sec__contents p {
-    margin-top: 22px;
-    padding-bottom: 5%;
-    text-align: left;
-    line-height: 1.333333; }
+  .p-sec01__contents,
+  .p-sec02__contents {
+    padding: 1.2rem;
+    color: #3c2a10;
+    background-color: rgba(255, 255, 255, 0.8); }
     @media (min-width: 961px) {
-      .p-sec__contents p {
-        margin-top: 28px; } }
-  .p-sec__contents + .p-sec__contents {
-    margin-top: 10px; }
-    @media (min-width: 961px) {
-      .p-sec__contents + .p-sec__contents {
-        margin-top: 20px; } }
+      .p-sec01__contents,
+      .p-sec02__contents {
+        padding: 2rem; } }
+    .p-sec01__contents h3,
+    .p-sec02__contents h3 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-align: left; }
+      @media (min-width: 641px) {
+        .p-sec01__contents h3,
+        .p-sec02__contents h3 {
+          font-size: 2.2rem; } }
+    .p-sec01__contents p,
+    .p-sec02__contents p {
+      margin-top: 22px;
+      padding-bottom: 5%;
+      text-align: left;
+      line-height: 1.333333; }
+      @media (min-width: 961px) {
+        .p-sec01__contents p,
+        .p-sec02__contents p {
+          margin-top: 28px; } }
+    .p-sec01__contents + .p-sec01__contents,
+    .p-sec02__contents + .p-sec01__contents, .p-sec01__contents +
+    .p-sec02__contents,
+    .p-sec02__contents +
+    .p-sec02__contents {
+      margin-top: 10px; }
+      @media (min-width: 961px) {
+        .p-sec01__contents + .p-sec01__contents,
+        .p-sec02__contents + .p-sec01__contents, .p-sec01__contents +
+        .p-sec02__contents,
+        .p-sec02__contents +
+        .p-sec02__contents {
+          margin-top: 20px; } }
 
 /************************************************************************/
 /*  END OF FILE                                       									*/
@@ -713,16 +717,16 @@ body.open {
         width: 50%; } }
   .p-card-sec__figcaption {
     width: 100%;
-    padding: 2.9rem 5.9rem 4.0rem 3.4rem;
+    padding: 2.9rem 5.9rem 4rem 3.4rem;
     color: #fff; }
     @media (min-width: 641px) {
       .p-card-sec__figcaption {
         width: 50%; } }
     @media (min-width: 961px) {
       .p-card-sec__figcaption {
-        padding: 5.3rem 3.4rem 6.0rem 3.3rem; } }
+        padding: 5.3rem 3.4rem 6rem 3.3rem; } }
     .p-card-sec__figcaption h2 {
-      font-size: clamp(2rem, calc(2.0rem + 1vw), 3.6rem);
+      font-size: clamp(2rem, calc(2rem + 1vw), 3.6rem);
       font-weight: bold;
       text-align: left; }
     .p-card-sec__figcaption h3 {
@@ -955,7 +959,7 @@ body.open {
         padding-left: calc(12.6% * 0.61);
         width: 61%; } }
     .p-map-sec__contents h2 {
-      font-size: clamp(3rem, calc(3.0rem + 1vw), 3.6rem);
+      font-size: clamp(3rem, calc(3rem + 1vw), 3.6rem);
       text-align: left; }
       .p-map-sec__contents h2::after {
         content: "";

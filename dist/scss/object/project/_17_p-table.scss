@@ -18,31 +18,30 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.p-table{
+.p-table {
 	margin-top: 50px;
 
 	background-color: $bgc-white;
 
-	table{
+	table {
 		width: 100%;
 
 		text-align: left;
 	}
 
-	tr{
-		td{
+	tr {
+		td {
 			width: 32%;
 			padding: 28px 30px;
 
 			outline: 1px solid $text-black;
 		}
 
-		td:nth-child(2){
+		td:nth-child(2) {
 			width: 68%;
 		}
 	}
 }
-
 
 /************************************************************************/
 /*  END OF FILE                                       									*/

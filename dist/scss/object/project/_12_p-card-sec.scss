@@ -18,7 +18,7 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.p-card-sec{
+.p-card-sec {
 	display: flex;
 	flex-direction: column;
 
@@ -30,7 +30,7 @@
 		flex-direction: row;
 	}
 
-	&:first-child{
+	&:first-child {
 		margin-top: 100px;
 
 		@include breakpoint(lg) {
@@ -38,7 +38,7 @@
 		}
 	}
 
-	&__img{
+	&__img {
 		object-fit: cover;
 		width: 100%;
 
@@ -47,9 +47,9 @@
 		}
 	}
 
-	&__figcaption{
+	&__figcaption {
 		width: 100%;
-		padding: 2.9rem 5.9rem 4.0rem 3.4rem;
+		padding: 2.9rem 5.9rem 4rem 3.4rem;
 
 		color: $text-white;
 
@@ -58,20 +58,20 @@
 		}
 
 		@include breakpoint(lg) {
-			padding: 5.3rem 3.4rem 6.0rem 3.3rem;
+			padding: 5.3rem 3.4rem 6rem 3.3rem;
 		}
 
-		h2{
-			font-size: clamp(2.0rem, calc(2.0rem + 1vw),3.6rem);
+		h2 {
+			font-size: clamp(2rem, calc(2rem + 1vw), 3.6rem);
 			font-weight: bold;
 
 			text-align: left;
 		}
 
-		h3{
+		h3 {
 			margin-top: 25px;
 
-			font-size: clamp(1.6rem, calc(1.6rem + 1vw),2.4rem);
+			font-size: clamp(1.6rem, calc(1.6rem + 1vw), 2.4rem);
 			font-weight: bold;
 
 			text-align: left;
@@ -85,7 +85,7 @@
 			}
 		}
 
-		p{
+		p {
 			margin-top: 11px;
 
 			text-align: left;
@@ -95,7 +95,7 @@
 			}
 		}
 
-		a{
+		a {
 			margin-top: 45px;
 
 			@include breakpoint(lg) {

@@ -23,6 +23,17 @@
 	flex-direction: column;
 	justify-content: space-between;
 
+	@include breakpoint(sm) {
+		flex-direction: row;
+	}
+}
+
+.p-sec01,
+.p-sec02 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
 	width: 100%;
 	padding: 20px;
 
@@ -59,46 +70,46 @@
 			margin-top: 644.5px;
 		}
 	}
-}
 
-.p-sec__contents {
-	padding: 1.2rem;
+	&__contents {
+		padding: 1.2rem;
 
-	color: $text-brown;
-	background-color: rgba($bgc-white, 0.8);
-
-	@include breakpoint(lg) {
-		padding: 2rem;
-	}
-
-	h3 {
-		font-size: 2.4rem;
-		font-weight: bold;
-
-		text-align: left;
-
-		@include breakpoint(sm) {
-			font-size: 2.2rem;
-		}
-	}
-
-	p {
-		margin-top: 22px;
-		padding-bottom: 5%;
-
-		text-align: left;
-		line-height: 1.333333;
+		color: $text-brown;
+		background-color: rgba($bgc-white, 0.8);
 
 		@include breakpoint(lg) {
-			margin-top: 28px;
+			padding: 2rem;
 		}
-	}
 
-	& + & {
-		margin-top: 10px;
+		h3 {
+			font-size: 2.4rem;
+			font-weight: bold;
 
-		@include breakpoint(lg) {
-			margin-top: 20px;
+			text-align: left;
+
+			@include breakpoint(sm) {
+				font-size: 2.2rem;
+			}
+		}
+
+		p {
+			margin-top: 22px;
+			padding-bottom: 5%;
+
+			text-align: left;
+			line-height: 1.333333;
+
+			@include breakpoint(lg) {
+				margin-top: 28px;
+			}
+		}
+
+		& + & {
+			margin-top: 10px;
+
+			@include breakpoint(lg) {
+				margin-top: 20px;
+			}
 		}
 	}
 }

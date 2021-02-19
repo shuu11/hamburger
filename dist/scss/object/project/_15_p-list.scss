@@ -18,7 +18,7 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.p-list{
+.p-list {
 	margin-top: 32px;
 	margin-left: 20px;
 
@@ -28,37 +28,36 @@
 	}
 }
 
-.p-list__ordered{
+.p-list__ordered {
 	text-align: left;
 
-	&--list{
-		&2{
+	&--list {
+		&2 {
 			margin-top: 23px;
 			margin-left: 18px;
 		}
 	}
 
-	&--list + &--list{
+	&--list + &--list {
 		margin-top: 23px;
 	}
 }
 
-.p-list__unordered{
+.p-list__unordered {
 	margin-top: 63px;
 	text-align: left;
 
-	&--list{
-		&2{
+	&--list {
+		&2 {
 			margin-top: 23px;
 			margin-left: 18px;
 		}
 	}
 
-	&--list + &--list{
+	&--list + &--list {
 		margin-top: 23px;
 	}
 }
-
 
 /************************************************************************/
 /*  END OF FILE                                       									*/

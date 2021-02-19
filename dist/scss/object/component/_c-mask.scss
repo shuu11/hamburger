@@ -18,23 +18,23 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.c-mask.open{
+.c-mask.open {
 	display: block;
 	position: fixed;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	background-color: rgba($bgc-black,0.5);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba($bgc-black, 0.5);
 }
 
-.c-mask__mv{
+.c-mask__mv {
 	position: absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	background-color: rgba($bgc-black,0.5);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba($bgc-black, 0.5);
 }
 
 /************************************************************************/

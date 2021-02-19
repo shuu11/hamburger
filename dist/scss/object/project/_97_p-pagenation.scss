@@ -18,7 +18,7 @@
 //----------------------------------------------------------------------
 //  Sass記述
 //----------------------------------------------------------------------
-.p-pagenation{
+.p-pagenation {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -27,7 +27,7 @@
 		justify-content: center;
 	}
 
-	&__num{
+	&__num {
 		display: none;
 		font-family: $ff-roboto;
 		font-weight: bold;
@@ -38,10 +38,10 @@
 	}
 
 	&__pre,
-	&__next{
+	&__next {
 		margin-left: 0px;
 
-		a{
+		a {
 			width: auto;
 			line-height: 35px;
 
@@ -50,10 +50,10 @@
 				width: 35px;
 			}
 
-			span{
+			span {
 				display: inline-block;
-				line-height:35px;
-				padding:0 10px;
+				line-height: 35px;
+				padding: 0 10px;
 
 				@include breakpoint(sm) {
 					display: none;
@@ -62,7 +62,7 @@
 		}
 	}
 
-	&__list{
+	&__list {
 		display: none;
 
 		@include breakpoint(sm) {
@@ -70,7 +70,7 @@
 			align-items: center;
 		}
 
-		li{
+		li {
 			margin-left: 15px;
 
 			a {
