@@ -89,6 +89,7 @@ const sass = {
 const bs = {
   port:5500,
   base:'./src/',
+  html:'index.html'
 };
 
 //----------------------------------------------------------------------
@@ -185,7 +186,7 @@ gulp.task('browser-sync', function(done){
   function(done){
     browserSync({
       notify:false,
-      proxy: `localhost:${bs.port}`,
+      proxy: `localhost:${bs.port}/${bs.html}`,
       open: 'external',
     });
   });
