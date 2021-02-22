@@ -1,1 +1,47 @@
-"use strict";{let e=new Swiper(".swiper-container",{effect:"fade",autoplay:{delay:12e3,stopOnLastSlide:!1,disableOnInteraction:!1,reverseDirection:!1},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",type:"bullets",clickable:!0}})}function hoge(e){console.log(e)}
+//----------------------------------------------------------------------
+//  mode
+//----------------------------------------------------------------------
+"use strict";
+
+//----------------------------------------------------------------------
+//  変数宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  main
+//----------------------------------------------------------------------
+{
+	let mySwiper = new Swiper('.swiper-container', {
+		effect: 'fade',
+		autoplay: {
+			delay: 12000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+			reverseDirection: false
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
+}
+
+//----------------------------------------------------------------------
+//  イベントハンドラ
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  関数
+//----------------------------------------------------------------------
+function hoge(str) {
+	console.log(str);
+}
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/
